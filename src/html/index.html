@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../img/lock.svg" />
+    <title>Генератор случайных паролей</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <h1>Генератор случайных паролей</h1>
+          <p class="description">
+            Создавайте надежные пароли для защиты своих учетных записей в
+            Интернете
+          </p>
+          <div class="generator-container">
+            <img class="strength" src="../img/very-reliable.svg" alt="emoji" />
+            <div class="generator">
+              <div class="output-container">
+                <div class="output">
+                  <p id="password"></p>
+                  <p id="badge" class="fw600"></p>
+                </div>
+                <button
+                  class="reload general-button"
+                  onclick="generatePassword()"
+                ></button>
+                <button id="copy" class="general-button fw600">
+                  КОПИРОВАТЬ
+                </button>
+              </div>
+              <form class="generator-settings">
+                <div class="slider-container">
+                  <legend>Длина пароля:</legend>
+                  <span id="slider-value">15</span>
+                  <div class="slider">
+                    <button
+                      id="minus"
+                      class="slider-button general-button"
+                    ></button>
+                    <input
+                      class="slider-input"
+                      type="range"
+                      min="1"
+                      max="40"
+                      value="15"
+                      name="range"
+                      step="1"
+                    />
+                    <button
+                      id="plus"
+                      class="slider-button general-button"
+                    ></button>
+                  </div>
+                </div>
+                <div class="complexity-settings">
+                  <p>Используемые символы:</p>
+                  <label class="option">
+                    <input
+                      type="checkbox"
+                      class="option-input visuallyHidden"
+                      checked
+                    />
+                    <span class="checkbox"></span>
+                    <p class="option-text">ABC</p>
+                  </label>
+                  <label class="option">
+                    <input
+                      type="checkbox"
+                      class="option-input visuallyHidden"
+                      checked
+                    />
+                    <span class="checkbox"></span>
+                    <p class="option-text">abc</p>
+                  </label>
+                  <label class="option">
+                    <input
+                      type="checkbox"
+                      class="option-input visuallyHidden"
+                      checked
+                    />
+                    <span class="checkbox"></span>
+                    <p class="option-text">123</p>
+                  </label>
+                  <label class="option">
+                    <input
+                      type="checkbox"
+                      class="option-input visuallyHidden"
+                    />
+                    <span class="checkbox"></span>
+                    <p class="option-text">#$&</p>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="modal-overlay">
+      <div class="container modal-container">
+        <div class="modal">
+          <h2>Пароль скопирован в буфер обмена</h2>
+          <button id="btn-close-modal" class="general-button"></button>
+          <p id="modal-text">
+            Чтобы вставить пароль в другое место, нажмите комбинацию клавиш
+            <span class="fw600"> CTRL + V</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
