@@ -49,9 +49,9 @@ body {
 }
 
 .container {
-  max-width: calc(1440px+2rem);
+  max-width: calc(1440px + 2rem);
   margin-inline: auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-inline: 1rem;
 }
 
@@ -366,6 +366,9 @@ input:disabled ~ .option-text {
 }
 
 @media screen and (max-width: 600px) {
+  html {
+    font-size: 18px;
+  }
   .strength {
     width: 200px;
   }
