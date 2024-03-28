@@ -46,27 +46,27 @@ function generatePassword() {
   if (password.length < 5) {
     badge.innerText = "ОЧЕНЬ НЕНАДЕЖНЫЙ";
     badge.classList.add("unreliable");
-    strengthImage.setAttribute("src", "../img/very-unreliable.svg");
+    strengthImage.setAttribute("src", "/password-generator/img/very-unreliable.svg");
     passwordStrengthNew = "veryUnreliable";
   } else if (5 <= password.length && password.length <= 7) {
     badge.innerText = "НЕНАДЕЖНЫЙ";
     badge.classList.add("unreliable");
-    strengthImage.setAttribute("src", "../img/unreliable.svg");
+    strengthImage.setAttribute("src", "/password-generator/img/unreliable.svg");
     passwordStrengthNew = "unreliable";
   } else if (8 <= password.length && password.length <= 9) {
-    badge.innerText = "ХОРОШИЙ  ";
+    badge.innerText = "ХОРОШИЙ";
     badge.classList.add("good");
-    strengthImage.setAttribute("src", "../img/good.svg");
+    strengthImage.setAttribute("src", "/password-generator/img/good.svg");
     passwordStrengthNew = "good";
   } else if (10 <= password.length && password.length <= 11) {
     badge.innerText = "НАДЕЖНЫЙ";
     badge.classList.add("reliable");
-    strengthImage.setAttribute("src", "../img/reliable.svg");
+    strengthImage.setAttribute("src", "/password-generator/img/reliable.svg");
     passwordStrengthNew = "reliable";
   } else {
     badge.innerText = "ОЧЕНЬ НАДЕЖНЫЙ";
     badge.classList.add("veryReliable");
-    strengthImage.setAttribute("src", "../img/very-reliable.svg");
+    strengthImage.setAttribute("src", "/password-generator/img/very-reliable.svg");
     passwordStrengthNew = "veryReliable";
   }
 
